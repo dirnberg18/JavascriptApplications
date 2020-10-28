@@ -8,6 +8,7 @@ var helmet = require("helmet");
 var app = express();
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/book');
+var usersRouter = require('./routes/user');
 
 
 app.use(cors());  
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/book', booksRouter);
+app.use('/user', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
