@@ -30,6 +30,7 @@ function myAuthorizer(username, password,cb){
 }
 
 //router.use(basicAuth({users: { 'admin': '1234' }}))
+
 router.use(basicAuth( { authorizer: myAuthorizer, authorizeAsync:true, } ))
 
 router.get('/:id?', function(req, res, next) {
