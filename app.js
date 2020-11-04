@@ -11,13 +11,8 @@ var booksRouter = require('./routes/book');
 var usersRouter = require('./routes/user');
 var loginRouter = require('./routes/login');
 
-
 app.use(cors());  
 app.use(helmet());
-
-
-
-var app = express();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
